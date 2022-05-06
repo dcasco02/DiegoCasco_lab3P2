@@ -19,7 +19,7 @@ public class DiegoCasco_Lab3P2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ArrayList compradores=new ArrayList();
+        ArrayList <Cliente> compradores=new ArrayList();
         Residencial r=new Residencial();
         Edificio e=new Edificio();
         Scanner lea=new Scanner(System.in);
@@ -40,7 +40,8 @@ public class DiegoCasco_Lab3P2 {
                    + "11-Eliminar Edificios\n"
                    + "12-Eliminar Apartamentos\n"
                    + "13-Agregar Compradores\n"
-                   + "14-Agregar Residenciales"));
+                   + "14-Agregar Residenciales\n"
+                   + "15-Simulacion Venta"));
            if(opcion==1){
                System.out.println("Ingrese la posicion de la casa: ");
                int pos=lea.nextInt();
@@ -149,10 +150,53 @@ public class DiegoCasco_Lab3P2 {
                int posedi=lea.nextInt();
                r.getEdificio().get(pos).getAparts().remove(posedi);
            }if(opcion==13){
-               
+               System.out.println("Ingrese su Nombre: ");
+               String nom=lea.next();
+               System.out.println("Ingrese la edad: ");
+               int edad=lea.nextInt();
+               System.out.println("Ingrese su id: ");
+               int id=lea.nextInt();
+               System.out.println("Ingrese su Usuario: ");
+               String usuario=lea.next();
+               System.out.println("Ingrese su password");
+               String password=lea.next();
+               compradores.add(new Cliente(nom,edad,id, usuario, password));
            }if(opcion==14){
                String nombre=lea.next();
                r.setNombre(nombre);
+           }if(opcion==15){
+               System.out.println("Ingrese su usuario: ");
+               String user=lea.next();
+               System.out.println("Ingrese su password: ");
+               String pass=lea.next();
+               boolean usuariovalido = false;
+               for (Cliente comprador : compradores) {
+               if(user.equals(comprador.getUsuario())&&pass.equals(comprador.getPassword())){
+                   usuariovalido=true;
+                   int opciones1=7;
+                   while(opcion!=0){
+                       opciones1=Integer.parseInt(
+                               JOptionPane.showInputDialog("0-salida\n"
+                               +"1-Comprar Casa\n"
+                                       +"2-Comprar edificio\n"
+                                       + "3-Comprar Apartamento"));
+                       if(opcion==1){
+                           System.out.println("Ingrese la posicion de la casa que desea comprar: ");
+                           int pos=lea.nextInt();
+                           
+                       }if(opcion==2){
+                           System.out.println("Ingrese la posicion de el edificio que desea comprar: ");
+                           int pos=lea.nextInt();
+                       }if(opcion==3){
+                           System.out.println("Ingrese la posicion de el edifico que desea comprar: ");
+                           int pos=lea.nextInt();
+                           System.out.println("Ingrese la posicion del apartamento que desea comprar: ");
+                       }
+                   }
+                   break;
+               } 
+            }
+               System.out.println("Usuario No encontrado o Password Incorrecta");
            }
         }
     }
