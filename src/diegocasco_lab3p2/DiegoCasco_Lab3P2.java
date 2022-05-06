@@ -26,12 +26,17 @@ public class DiegoCasco_Lab3P2 {
         while(opcion!=0){
            opcion=Integer.parseInt(
            JOptionPane.showInputDialog("0-Salida\n"
-                   + "1-Agregar Propiedad\n"
-                   + "2-Agregar Comprador\n"
-                   + "3-Modificar Propiedades\n"
-                   + "4-Eliminar Propiedades\n"
-                   + "5-Comprar Propiedades\n"
-                   + ""));
+                   + "1-Agregar Casa\n"
+                   + "2-Agregar Edificio\n"
+                   + "3-Agregar Apartamneto\n"
+                   + "4-Modificar Casa\n"
+                   + "5-Modificar Edificio"
+                   + "6-Modificar Apartamentos\n"
+                   + "7-Listar Casas\n"
+                   + "8-Listar Edificio\n"
+                   + "9-Listar Apartamentos\n"
+                   + "10-Creador Compradores\n"
+                   + "11-"));
            if(opcion==1){
                
            }
