@@ -51,6 +51,7 @@ public class DiegoCasco_Lab3P2 {
                int num=lea.nextInt();
                System.out.println("Ingrese la Direccion: ");
                String dir=lea.next();
+               lea.nextLine();
                System.out.println("Ingrese la referencia: ");
                String ref=lea.next();
                r.getCasas().add(new Casa(num, ref, dir, id));
@@ -59,6 +60,7 @@ public class DiegoCasco_Lab3P2 {
                int loc=lea.nextInt();
                System.out.println("Ingrese el nombre:");
                String nom=lea.next();
+               lea.nextLine();
                System.out.println("Ingrese la dirreccion del edificio: ");
                String dir=lea.next();
                System.out.println("Ingrese el id del edificio: ");
@@ -71,6 +73,7 @@ public class DiegoCasco_Lab3P2 {
                int numlocal=lea.nextInt();
                System.out.println("Ingrese la dirreccion del apartamento: ");
                String dir=lea.next();
+               lea.nextLine();
                System.out.println("Ingrese la referencia del apartamento: ");
                String ref=lea.nextLine();
                System.out.println("Ingrese el id del apartamento: ");
@@ -177,7 +180,7 @@ public class DiegoCasco_Lab3P2 {
                    while(opcion!=0){
                        opciones1=Integer.parseInt(
                                JOptionPane.showInputDialog("0-salida\n"
-                               +"1-Comprar Casa\n"
+                                       +"1-Comprar Casa\n"
                                        +"2-Comprar edificio\n"
                                        + "3-Comprar Apartamento"));
                        if(opcion==1){
