@@ -72,7 +72,7 @@ public class DiegoCasco_Lab3P2 {
                System.out.println("Ingrese la dirreccion del apartamento: ");
                String dir=lea.next();
                System.out.println("Ingrese la referencia del apartamento: ");
-               String ref=lea.next();
+               String ref=lea.nextLine();
                System.out.println("Ingrese el id del apartamento: ");
                int id=lea.nextInt();
                r.getEdificio().get(pos).getAparts().add(new Apartamento(numlocal, ref, dir, id));
@@ -89,7 +89,7 @@ public class DiegoCasco_Lab3P2 {
                String dir=lea.next();
                r.getCasas().get(pos).setDirrecion(dir);
                System.out.println("Ingrese la referencia: ");
-               String ref=lea.next();
+               String ref=lea.nextLine();
                r.getCasas().get(pos).setReferencia(ref);
            }if(opcion==5){
                System.out.println("Ingrese la posicion de la casa a modificar: ");
