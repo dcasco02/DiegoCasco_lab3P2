@@ -47,13 +47,10 @@ public class DiegoCasco_Lab3P2 {
                int pos=lea.nextInt();
                System.out.println("Ingrese la Identidad de la casa: ");
                int id=lea.nextInt();
-               r.getCasas().get(pos).setId(pos);
                System.out.println("Ingrese el numero de casa: ");
                int num=lea.nextInt();
-               r.getCasas().get(pos).setNumerocasa(num);
                System.out.println("Ingrese la Direccion: ");
                String dir=lea.next();
-               r.getCasas().get(pos).setDirrecion(dir);
                System.out.println("Ingrese la referencia: ");
                String ref=lea.next();
                propiedad.add(new Casa(num, ref, dir,id));
@@ -72,23 +69,62 @@ public class DiegoCasco_Lab3P2 {
            }if(opcion==3){
                System.out.println("Ingrese la posicion de el dificio al cual pertenece al apartamento: ");
                int pos=lea.nextInt();
-               System.out.println("ingrese el numero de local: ");
+               System.out.println("ingrese el numero de apartamento: ");
                int numlocal=lea.nextInt();
-               System.out.println("Ingrese el nombre:");
-               String nom=lea.next();
-               System.out.println("Ingrese la dirreccion del edificio: ");
+               System.out.println("Ingrese la dirreccion del apartamento: ");
                String dir=lea.next();
-               System.out.println("Ingrese la referencia del edificio: ");
+               System.out.println("Ingrese la referencia del apartamento: ");
                String ref=lea.next();
-               System.out.println("Ingrese el id del edificio: ");
+               System.out.println("Ingrese el id del apartamento: ");
                int id=lea.nextInt();
                r.getEdificio().get(pos).getAparts().add(new Apartamento(numlocal, ref, dir, id));
            }if(opcion==4){
-               
+               System.out.println("Ingrese la posicion de la casa a modificar: ");
+               int pos=lea.nextInt();
+               System.out.println("Ingrese la Identidad de la casa: ");
+               int id=lea.nextInt();
+               r.getCasas().get(pos).setId(pos);
+               System.out.println("Ingrese el numero de casa: ");
+               int num=lea.nextInt();
+               r.getCasas().get(pos).setNumerocasa(num);
+               System.out.println("Ingrese la Direccion: ");
+               String dir=lea.next();
+               r.getCasas().get(pos).setDirrecion(dir);
+               System.out.println("Ingrese la referencia: ");
+               String ref=lea.next();
+               r.getCasas().get(pos).setReferencia(ref);
            }if(opcion==5){
-               
+               System.out.println("Ingrese la posicion de la casa a modificar: ");
+               int pos=lea.nextInt();
+               System.out.println("Ingrese la Cantidad de locales: ");
+               int loc=lea.nextInt();
+               r.getEdificio().get(pos).setCantidadlocales(loc);
+               System.out.println("Ingrese el nombre:");
+               String nom=lea.next();
+               r.getEdificio().get(pos).setNombre(nom);
+               System.out.println("Ingrese la dirreccion del edificio: ");
+               String dir=lea.next();
+               r.getEdificio().get(loc).setDirrecion(dir);
+               System.out.println("Ingrese el id del edificio: ");
+               int id=lea.nextInt();
+               r.getEdificio().get(pos).setId(id);
            }if(opcion==6){
-               
+               System.out.println("Ingrese la posicion de el dificio al cual pertenece al apartamento: ");
+               int posedi=lea.nextInt();
+               System.out.println("Ingrese la posicion del Apartamento: ");
+               int pos=lea.nextInt();
+               System.out.println("ingrese el numero de apartamento: ");
+               int numlocal=lea.nextInt();
+               r.getEdificio().get(posedi).getAparts().get(pos).setNumerolocal(numlocal);
+               System.out.println("Ingrese la dirreccion del apartamento: ");
+               String dir=lea.next();
+               r.getEdificio().get(posedi).getAparts().get(pos).setDirrecion(dir);
+               System.out.println("Ingrese la referencia del apartamento: ");
+               String ref=lea.next();
+               r.getEdificio().get(posedi).getAparts().get(pos).setReferencia(ref);
+               System.out.println("Ingrese el id del apartamento: ");
+               int id=lea.nextInt();
+               r.getEdificio().get(posedi).getAparts().get(pos).setId(id);
            }if(opcion==7){
                
            }if(opcion==8){
