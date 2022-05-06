@@ -22,6 +22,7 @@ public class DiegoCasco_Lab3P2 {
         ArrayList propiedad=new ArrayList();
         ArrayList comprador=new ArrayList();
         Residencial r=new Residencial();
+        Edificio e=new Edificio();
         Scanner lea=new Scanner(System.in);
         int opcion=69;
         while(opcion!=0){
@@ -42,11 +43,46 @@ public class DiegoCasco_Lab3P2 {
                    + "13-Eliminar Compradores\n"
                    + "14-Agregar Residenciales"));
            if(opcion==1){
-               
+               System.out.println("Ingrese la posicion de la casa: ");
+               int pos=lea.nextInt();
+               System.out.println("Ingrese la Identidad de la casa: ");
+               int id=lea.nextInt();
+               r.getCasas().get(pos).setId(pos);
+               System.out.println("Ingrese el numero de casa: ");
+               int num=lea.nextInt();
+               r.getCasas().get(pos).setNumerocasa(num);
+               System.out.println("Ingrese la Direccion: ");
+               String dir=lea.next();
+               r.getCasas().get(pos).setDirrecion(dir);
+               System.out.println("Ingrese la referencia: ");
+               String ref=lea.next();
+               propiedad.add(new Casa(num, ref, dir,id));
+               r.getCasas().add(new Casa(num, ref, dir, id));
            }if(opcion==2){
-               
+               System.out.println("Ingrese la Cantidad de locales: ");
+               int loc=lea.nextInt();
+               System.out.println("Ingrese el nombre:");
+               String nom=lea.next();
+               System.out.println("Ingrese la dirreccion del edificio: ");
+               String dir=lea.next();
+               System.out.println("Ingrese el id del edificio: ");
+               int id=lea.nextInt();
+               r.getEdificio().add(new Edificio(loc,nom,dir,id));
+               propiedad.add(new Edificio(loc,nom,dir,id));
            }if(opcion==3){
-               
+               System.out.println("Ingrese la posicion de el dificio al cual pertenece al apartamento: ");
+               int pos=lea.nextInt();
+               System.out.println("ingrese el numero de local: ");
+               int numlocal=lea.nextInt();
+               System.out.println("Ingrese el nombre:");
+               String nom=lea.next();
+               System.out.println("Ingrese la dirreccion del edificio: ");
+               String dir=lea.next();
+               System.out.println("Ingrese la referencia del edificio: ");
+               String ref=lea.next();
+               System.out.println("Ingrese el id del edificio: ");
+               int id=lea.nextInt();
+               r.getEdificio().get(pos).getAparts().add(new Apartamento(numlocal, ref, dir, id));
            }if(opcion==4){
                
            }if(opcion==5){
