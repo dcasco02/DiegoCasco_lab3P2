@@ -37,10 +37,10 @@ public class DiegoCasco_Lab3P2 {
                    + "7-Listar Casas\n"
                    + "8-Listar Edificio\n"
                    + "9-Listar Apartamentos\n"
-                   + "10-Creador Compradores\n"
-                   + "11-Modificar Compradores\n"
-                   + "12-Listar Compradores\n"
-                   + "13-Eliminar Compradores\n"
+                   + "10-Eliminar Casas\n"
+                   + "11-Eliminar Edificios\n"
+                   + "12-Eliminar Apartamentos\n"
+                   + "13-Agregar Compradores\n"
                    + "14-Agregar Residenciales"));
            if(opcion==1){
                System.out.println("Ingrese la posicion de la casa: ");
@@ -126,17 +126,31 @@ public class DiegoCasco_Lab3P2 {
                int id=lea.nextInt();
                r.getEdificio().get(posedi).getAparts().get(pos).setId(id);
            }if(opcion==7){
-               
+               for(int i=0;i<r.getCasas().size();i++){
+                   System.out.println(r.casas);
+               }
            }if(opcion==8){
-               
+               for(int i=0;i<r.getEdificio().size();i++){
+                   System.out.println(r.edificio);
+               }
            }if(opcion==9){
-               
+               for(int i=0;i<e.getAparts().size();i++){
+                   System.out.println(r.getEdificio().get(i).getAparts());
+               }
            }if(opcion==10){
-               
+               System.out.println("Ingrese la posicion de la casa a eliminar: ");
+               int pos=lea.nextInt();
+               r.getCasas().remove(pos);
            }if(opcion==11){
-               
+               System.out.println("Ingrese la posicion de el edificio a eliminar: ");
+               int pos=lea.nextInt();
+               r.getEdificio().remove(pos);
            }if(opcion==12){
-               
+               System.out.println("Ingrese la posicion del edifcio del apartamento: ");
+               int pos=lea.nextInt();
+               System.out.println("Ingrese la posicion del apartamento a eliminar: ");
+               int posedi=lea.nextInt();
+               r.getEdificio().get(pos).getAparts().remove(posedi);
            }if(opcion==13){
                
            }if(opcion==14){
