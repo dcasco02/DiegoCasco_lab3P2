@@ -21,6 +21,7 @@ public class DiegoCasco_Lab3P2 {
     public static void main(String[] args) {
         ArrayList propiedad=new ArrayList();
         ArrayList comprador=new ArrayList();
+        Residencial r=new Residencial();
         Scanner lea=new Scanner(System.in);
         int opcion=69;
         while(opcion!=0){
@@ -36,9 +37,39 @@ public class DiegoCasco_Lab3P2 {
                    + "8-Listar Edificio\n"
                    + "9-Listar Apartamentos\n"
                    + "10-Creador Compradores\n"
-                   + "11-"));
+                   + "11-Modificar Compradores\n"
+                   + "12-Listar Compradores\n"
+                   + "13-Eliminar Compradores\n"
+                   + "14-Agregar Residenciales"));
            if(opcion==1){
                
+           }if(opcion==2){
+               
+           }if(opcion==3){
+               
+           }if(opcion==4){
+               
+           }if(opcion==5){
+               
+           }if(opcion==6){
+               
+           }if(opcion==7){
+               
+           }if(opcion==8){
+               
+           }if(opcion==9){
+               
+           }if(opcion==10){
+               
+           }if(opcion==11){
+               
+           }if(opcion==12){
+               
+           }if(opcion==13){
+               
+           }if(opcion==14){
+               String nombre=lea.next();
+               r.setNombre(nombre);
            }
         }
     }
