@@ -5,12 +5,15 @@
  */
 package diegocasco_lab3p2;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author dcasc
  */
-public class BienesRaices {
-    private String dirrecion;
-    private int id;
+public class Residencial {
+    private String nombre;
+    ArrayList <Casa> casas=new ArrayList();
+    ArrayList <Edificio> edificio = new ArrayList();
     
 }

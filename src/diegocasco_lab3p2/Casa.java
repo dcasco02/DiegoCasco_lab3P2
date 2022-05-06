@@ -9,8 +9,6 @@ package diegocasco_lab3p2;
  *
  * @author dcasc
  */
-public class BienesRaices {
-    private String dirrecion;
-    private int id;
+public class Casa extends BienesRaices {
     
 }
