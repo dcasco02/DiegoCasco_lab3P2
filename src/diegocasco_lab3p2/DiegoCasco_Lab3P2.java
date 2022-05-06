@@ -19,8 +19,7 @@ public class DiegoCasco_Lab3P2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ArrayList propiedad=new ArrayList();
-        ArrayList comprador=new ArrayList();
+        ArrayList compradores=new ArrayList();
         Residencial r=new Residencial();
         Edificio e=new Edificio();
         Scanner lea=new Scanner(System.in);
@@ -53,7 +52,6 @@ public class DiegoCasco_Lab3P2 {
                String dir=lea.next();
                System.out.println("Ingrese la referencia: ");
                String ref=lea.next();
-               propiedad.add(new Casa(num, ref, dir,id));
                r.getCasas().add(new Casa(num, ref, dir, id));
            }if(opcion==2){
                System.out.println("Ingrese la Cantidad de locales: ");
@@ -65,7 +63,6 @@ public class DiegoCasco_Lab3P2 {
                System.out.println("Ingrese el id del edificio: ");
                int id=lea.nextInt();
                r.getEdificio().add(new Edificio(loc,nom,dir,id));
-               propiedad.add(new Edificio(loc,nom,dir,id));
            }if(opcion==3){
                System.out.println("Ingrese la posicion de el dificio al cual pertenece al apartamento: ");
                int pos=lea.nextInt();
