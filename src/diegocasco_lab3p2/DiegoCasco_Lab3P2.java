@@ -183,14 +183,17 @@ public class DiegoCasco_Lab3P2 {
                        if(opcion==1){
                            System.out.println("Ingrese la posicion de la casa que desea comprar: ");
                            int pos=lea.nextInt();
-                           
+                           comprador.getPropiedad().add(r.getCasas().get(pos));
                        }if(opcion==2){
                            System.out.println("Ingrese la posicion de el edificio que desea comprar: ");
                            int pos=lea.nextInt();
+                           comprador.getPropiedad().add(r.getEdificio().get(pos));
                        }if(opcion==3){
                            System.out.println("Ingrese la posicion de el edifico que desea comprar: ");
                            int pos=lea.nextInt();
                            System.out.println("Ingrese la posicion del apartamento que desea comprar: ");
+                           int posapr=lea.nextInt();
+                           comprador.getPropiedad().add(r.getEdificio().get(pos).getAparts().get(posapr));
                        }
                    }
                    break;

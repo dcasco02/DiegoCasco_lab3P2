@@ -17,7 +17,7 @@ public class Cliente {
     private int id;
     private String usuario;
     private String password;
-    private ArrayList propiedad=new ArrayList();
+    private ArrayList  propiedad=new ArrayList();
 
     public Cliente() {
     }
